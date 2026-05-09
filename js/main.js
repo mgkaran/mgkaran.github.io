@@ -150,10 +150,34 @@ const langToggleBtn = document.getElementById('langToggle');
 const savedLang     = localStorage.getItem('portfolio-lang') || 'de';
 applyLanguage(savedLang, false);
 
-function applyLanguage(lang, animate) {
+function applyLanguage(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  /* 1. Pill toggle */
   document.querySelectorAll('.lang-opt').forEach(opt => {
     opt.classList.toggle('active', opt.dataset.lang === lang);
   });
+
+  /* 2. Plain text nodes */
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = t[el.dataset.i18n];
+    if (val !== undefined) el.textContent = val;
+  });
+
+  /* 3. HTML nodes (headings with inner <span>, rich text) */
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const val = t[el.dataset.i18nHtml];
+    if (val !== undefined) el.innerHTML = val;
+  });
+
+  /* 4. Input / textarea placeholders */
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const val = t[el.dataset.i18nPlaceholder];
+    if (val !== undefined) el.placeholder = val;
+  });
+
+  /* 5. html lang attribute + persist */
   document.documentElement.lang = lang;
   localStorage.setItem('portfolio-lang', lang);
 }
