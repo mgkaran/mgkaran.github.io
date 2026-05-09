@@ -1676,10 +1676,205 @@ body.dark-theme .badge-level {
 }
 
 /* ============================================================
-   PROJECTS SECTION (placeholder)
+   PROJECTS SECTION
    ============================================================ */
 .projects {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Card shell */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Gradient top accent bar */
+.project-accent-bar {
+  height: 4px;
+  background: var(--gradient-main);
+  flex-shrink: 0;
+}
+
+.project-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 22px 22px;
+  gap: 16px;
+}
+
+/* Header: badge + chips */
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(0, 170, 255, 0.1);
+  border: 1px solid rgba(0, 170, 255, 0.2);
+  color: var(--blue-1);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.project-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+/* Body */
+.project-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.project-app {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--blue-1);
+  margin-bottom: 10px;
+}
+
+.project-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0;
+  margin: 0;
+}
+
+.project-features li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  padding-left: 18px;
+  position: relative;
+}
+
+.project-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--blue-1);
+  background: rgba(0, 170, 255, 0.12);
+}
+
+/* Actions */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.project-btn {
+  padding: 9px 18px;
+  font-size: 0.8rem;
+  gap: 6px;
+}
+
+/* Coming soon card */
+.project-card-soon {
+  border-style: dashed;
+  opacity: 0.8;
+}
+
+.project-soon-inner {
+  align-items: center;
+  text-align: center;
+  padding: 36px 24px;
+  gap: 14px;
+}
+
+.soon-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 160, 0, 0.1);
+  border: 1px solid rgba(255, 160, 0, 0.3);
+  color: #e08800;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+body.dark-theme .soon-badge {
+  color: #ffb733;
+  background: rgba(255, 160, 0, 0.12);
+}
+
+.soon-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(0, 206, 255, 0.06));
+  border: 1px solid rgba(0, 170, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-1);
+  margin: 0 auto;
+}
+
+.soon-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.soon-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 280px;
 }
 
 /* ============================================================
@@ -1826,6 +2021,10 @@ body.dark-theme .badge-level {
   .exp-edu-grid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 
