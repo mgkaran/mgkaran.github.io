@@ -310,3 +310,41 @@ function animateCount(el) {
     if (current >= target) clearInterval(timer);
   }, delay);
 }
+
+/* ============================================================
+   CONTACT FORM  (Web3Forms — get free key at web3forms.com)
+   ============================================================ */
+const contactForm   = document.getElementById('contactForm');
+const formSubmitBtn = document.getElementById('formSubmitBtn');
+const formSuccess   = document.getElementById('formSuccess');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const origHTML = formSubmitBtn.innerHTML;
+    formSubmitBtn.disabled = true;
+    formSubmitBtn.innerHTML = '<span>Sending…</span>';
+
+    try {
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method : 'POST',
+        body   : new FormData(contactForm)
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        contactForm.reset();
+        formSuccess.classList.add('visible');
+        setTimeout(() => formSuccess.classList.remove('visible'), 7000);
+      } else {
+        alert('Something went wrong. Please email me directly at mgkaran2001@gmail.com');
+      }
+    } catch {
+      alert('Network error. Please email me directly at mgkaran2001@gmail.com');
+    } finally {
+      formSubmitBtn.disabled = false;
+      formSubmitBtn.innerHTML = origHTML;
+    }
+  });
+}
