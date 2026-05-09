@@ -281,3 +281,32 @@ document.addEventListener('keydown', (e) => {
 if (!localStorage.getItem('portfolio-tour-done')) {
   setTimeout(startTour, 1400);
 }
+
+/* ============================================================
+   STATS COUNTER ANIMATION
+   ============================================================ */
+const statCounters = document.querySelectorAll('.stat-count');
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCount(entry.target);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.6 });
+
+statCounters.forEach(el => statsObserver.observe(el));
+
+function animateCount(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const steps  = 55;
+  const delay  = 1600 / steps;
+  let current  = 0;
+  const inc    = target / steps;
+  const timer  = setInterval(() => {
+    current = Math.min(current + inc, target);
+    el.textContent = Math.floor(current);
+    if (current >= target) clearInterval(timer);
+  }, delay);
+}
