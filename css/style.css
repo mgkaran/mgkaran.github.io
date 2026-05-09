@@ -2614,7 +2614,13 @@ body.dark-theme .soon-badge {
     gap: 40px;
   }
 
+  /* Content first, image below on mobile/tablet */
+  .about-content {
+    order: 1;
+  }
+
   .about-img-wrap {
+    order: 2;
     justify-content: center;
   }
 
@@ -2676,30 +2682,24 @@ body.dark-theme .soon-badge {
    RESPONSIVE — MOBILE
    ============================================================ */
 @media (max-width: 600px) {
-  /* Two-row navbar: logo + menu btn on row 1, all icons on row 2 */
-  .nav-container {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 0;
-    row-gap: 8px;
+  /* Single-row navbar — social + divider hidden, menu btn stays rightmost */
+  .nav-social,
+  .nav-divider {
+    display: none;
   }
 
-  .nav-logo {
-    flex: 1;
-  }
-
+  /* Ensure nav-actions is a normal flex row (resets any contents/order tricks) */
   .nav-actions {
-    display: contents; /* children become direct flex items of nav-container */
+    display: flex;
+    gap: 6px;
   }
 
-  .nav-logo      { order: 1; }
-  .nav-menu-wrap { order: 2; }
-
-  /* Row 2 — preferences + social: centered below logo */
-  .lang-toggle   { order: 10; }
-  .theme-toggle  { order: 11; }
-  .nav-divider   { order: 12; display: flex; }
-  .nav-social    { order: 13; display: flex; }
+  /* Scroll indicator — explicit re-centering */
+  .hero-scroll {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+  }
 
   .section {
     padding: 56px 0;
