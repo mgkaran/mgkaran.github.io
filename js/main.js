@@ -23,22 +23,34 @@ function updateThemeIcon(theme) {
 }
 
 /* ============================================================
-   HAMBURGER MENU
+   DROPDOWN NAVIGATION MENU
    ============================================================ */
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+const menuBtn     = document.getElementById('menuBtn');
+const navDropdown = document.getElementById('navDropdown');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+function openMenu() {
+  menuBtn.classList.add('open');
+  navDropdown.classList.add('open');
+  menuBtn.setAttribute('aria-expanded', 'true');
+}
+
+function closeMenu() {
+  menuBtn.classList.remove('open');
+  navDropdown.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+}
+
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navDropdown.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Close menu on link click
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-  });
+navDropdown.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('click', (e) => {
+  if (!menuBtn.closest('.nav-menu-wrap').contains(e.target)) closeMenu();
 });
 
 /* ============================================================
@@ -62,11 +74,11 @@ function highlightActiveSection() {
     const top = section.offsetTop;
     const height = section.offsetHeight;
     const id = section.getAttribute('id');
-    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+    const link = document.querySelector(`.nav-dropdown a[href="#${id}"]`);
     if (!link) return;
 
     if (scrollY >= top && scrollY < top + height) {
-      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.nav-dropdown a').forEach(a => a.classList.remove('active'));
       link.classList.add('active');
     }
   });

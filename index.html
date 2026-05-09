@@ -19,6 +19,14 @@
         <span class="logo-first">Karan</span> Muthusamy
       </a>
       <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-opt" data-lang="de">DE</span>
+          <span class="lang-opt" data-lang="en">EN</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon">&#9790;</span>
+        </button>
+        <div class="nav-divider" aria-hidden="true"></div>
         <div class="nav-social">
           <a href="https://www.linkedin.com/in/karanmuthusamy/" id="linkedinBtn" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="17" height="17" aria-hidden="true">
@@ -31,25 +39,19 @@
             </svg>
           </a>
         </div>
-        <div class="nav-divider" aria-hidden="true"></div>
-        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
-          <span class="lang-opt" data-lang="de">DE</span>
-          <span class="lang-opt" data-lang="en">EN</span>
-        </button>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="theme-icon">&#9790;</span>
-        </button>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav-menu-wrap">
+          <button class="menu-btn" id="menuBtn" aria-label="Navigation menu" aria-expanded="false" aria-haspopup="true">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-dropdown" id="navDropdown" role="menu">
+            <li role="none"><a href="#about" role="menuitem">About</a></li>
+            <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+            <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+            <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+            <li role="none"><a href="#education" role="menuitem">Education</a></li>
+            <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
