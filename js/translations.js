@@ -13,6 +13,7 @@ const translations = {
     'nav.contact'    : 'Kontakt',
 
     /* ── Hero ── */
+    'hero.ai.pill'        : 'KI-gestützte Testautomatisierung',
     'hero.greeting'       : 'Hallo, ich bin',
     'hero.title.testing'  : 'Software Testing mit KI',
     'hero.title.istqb'    : 'ISTQB Zertifiziert',
@@ -145,6 +146,7 @@ const translations = {
     'nav.contact'    : 'Contact',
 
     /* ── Hero ── */
+    'hero.ai.pill'        : 'AI-Driven Test Automation',
     'hero.greeting'       : 'Hello, I\'m',
     'hero.title.testing'  : 'Software Testing with AI',
     'hero.title.istqb'    : 'ISTQB Certified',

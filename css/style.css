@@ -667,10 +667,9 @@ ul {
   animation: heroFadeUp 0.6s ease 0.38s forwards;
 }
 
-.ai-star {
+.ai-stars-icon {
   color: var(--blue-1);
-  font-size: 0.82rem;
-  line-height: 1;
+  flex-shrink: 0;
 }
 
 .hero-cta {
