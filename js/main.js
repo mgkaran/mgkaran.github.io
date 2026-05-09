@@ -204,8 +204,8 @@ const tourSteps = [
   {
     targetId : 'langToggle',
     icon     : '🌐',
-    title    : 'Sprache wechseln / Switch Language',
-    desc     : 'Wechsle jederzeit zwischen Deutsch und English — die Website ist standardmäßig auf Deutsch eingestellt.',
+    title    : 'Sprache / Language',
+    desc     : 'The site opens in German by default. Use this toggle to switch to English anytime — your preference is saved automatically.',
   },
   {
     targetId : 'linkedinBtn',

@@ -24,7 +24,7 @@ const translations = {
     /* ── About ── */
     'about.label' : 'Über mich',
     'about.title' : 'Wer ich <span>bin</span>',
-    'about.bio'   : 'ISTQB-zertifizierter QA Engineer mit ca. 2 Jahren Expertise in Testautomatisierung und Qualitätssicherung. Kompetent in funktionalen Tests, CI/CD-Integration, Regressionstests und E2E-Testing mit praktischer Erfahrung in Fehleranalyse, strukturiertem Testdesign und agiler Scrum-Lieferung. Einsatz KI-gestützter Software-Automatisierung. Bekannt für qualitätsorientiertes Denken, funktionsübergreifende Zusammenarbeit und kontinuierliche Prozessverbesserung in regulierten Umgebungen.',
+    'about.bio'   : 'ISTQB-zertifizierter QA Engineer mit ca. 2 Jahren Expertise in Testautomatisierung und Qualitätssicherung. Kompetent in funktionalen Tests, CI/CD-Integration, Regressionstests und E2E-Testing mit praktischer Erfahrung in Fehleranalyse, strukturiertem Testdesign und agiler Scrum-Lieferung. Nutzt KI-Tools wie GitHub Copilot und LLM-gestützte Testgenerierung, um Automatisierungs-Workflows zu beschleunigen und die Testabdeckung zu verbessern. Bekannt für qualitätsorientiertes Denken, funktionsübergreifende Zusammenarbeit und kontinuierliche Prozessverbesserung in regulierten Umgebungen.',
 
     /* ── Stats ── */
     'stats.years'      : 'Jahre Erfahrung',
@@ -156,7 +156,7 @@ const translations = {
     /* ── About ── */
     'about.label' : 'About Me',
     'about.title' : 'Who I <span>Am</span>',
-    'about.bio'   : 'ISTQB-certified QA Engineer with ~2 years of expertise in Test Automation and Quality Assurance. Proficient in Functional, CI/CD Integration, Regression, and E2E Testing with hands-on experience in defect analysis, structured test design, and Agile Scrum delivery. Leveraging AI-Driven software automation. Recognised for a quality-driven mindset, cross-functional collaboration, and continuous process improvement in regulated environments.',
+    'about.bio'   : 'ISTQB-certified QA Engineer with ~2 years of expertise in Test Automation and Quality Assurance. Proficient in Functional, CI/CD Integration, Regression, and E2E Testing with hands-on experience in defect analysis, structured test design, and Agile Scrum delivery. Leverages AI tools including GitHub Copilot and LLM-assisted test generation to accelerate automation workflows and improve test coverage. Recognised for a quality-driven mindset, cross-functional collaboration, and continuous process improvement in regulated environments.',
 
     /* ── Stats ── */
     'stats.years'      : 'Years Experience',
