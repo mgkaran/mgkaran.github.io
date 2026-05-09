@@ -67,16 +67,15 @@ window.addEventListener('scroll', () => {
    ACTIVE NAV LINK HIGHLIGHT
    ============================================================ */
 function highlightActiveSection() {
-  const sections = document.querySelectorAll('section[id]');
   const scrollY = window.scrollY + 100;
+  const links = document.querySelectorAll('.nav-dropdown a[href^="#"]');
 
-  sections.forEach(section => {
-    const top = section.offsetTop;
-    const height = section.offsetHeight;
-    const id = section.getAttribute('id');
-    const link = document.querySelector(`.nav-dropdown a[href="#${id}"]`);
-    if (!link) return;
-
+  links.forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.offsetTop;
+    const height = el.offsetHeight;
     if (scrollY >= top && scrollY < top + height) {
       document.querySelectorAll('.nav-dropdown a').forEach(a => a.classList.remove('active'));
       link.classList.add('active');
