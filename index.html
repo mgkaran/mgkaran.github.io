@@ -72,11 +72,18 @@
           <span data-i18n="hero.title.istqb">ISTQB Certified</span>
         </div>
         <div class="hero-ai-pill" aria-label="AI-Driven Test Automation">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="17" height="17" aria-hidden="true" class="ai-stars-icon">
-            <path d="M9 4 L10.2 10.8 L17 12 L10.2 13.2 L9 20 L7.8 13.2 L1 12 L7.8 10.8 Z"/>
-            <path d="M17 1 L17.7 3.8 L21 4.5 L17.7 5.2 L17 8 L16.3 5.2 L13 4.5 L16.3 3.8 Z"/>
-          </svg>
           <span data-i18n="hero.ai.pill">KI-gestützte Testautomatisierung</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="17" height="17" aria-hidden="true" class="ai-stars-icon">
+            <defs>
+              <linearGradient id="aiPillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00AAFF"/>
+                <stop offset="50%" stop-color="#00CEFF"/>
+                <stop offset="100%" stop-color="#70BDFF"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#aiPillGrad)" d="M9 4 L10.2 10.8 L17 12 L10.2 13.2 L9 20 L7.8 13.2 L1 12 L7.8 10.8 Z"/>
+            <path fill="url(#aiPillGrad)" d="M17 1 L17.7 3.8 L21 4.5 L17.7 5.2 L17 8 L16.3 5.2 L13 4.5 L16.3 3.8 Z"/>
+          </svg>
         </div>
 
         <p class="hero-tagline" data-i18n="hero.tagline">
@@ -558,16 +565,15 @@
                   <span class="cert-pill">ISTQB® Certified</span>
                   <h3 class="cert-title">Certified Tester Foundation Level</h3>
                   <p class="cert-issuer">International Software Testing Qualifications Board</p>
+                  <p class="cert-meta">No. ITB-CTFL-121969 &middot; 26 March 2023</p>
                 </div>
               </div>
-              <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="cert.show">Show Credential</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
+              <button class="cert-link" id="showCredentialBtn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
                 </svg>
-              </a>
+                <span data-i18n="cert.show">Zertifikat ansehen</span>
+              </button>
             </div>
 
           </div>
@@ -882,6 +888,32 @@
           <span class="cv-flag" aria-hidden="true">🇩🇪</span>
           <span class="cv-lang">Deutsch</span>
           <span class="cv-ext">PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CERTIFICATE MODAL ===== -->
+  <!-- Place ISTQB_Certificate.pdf at: assets/certificates/ISTQB_Certificate.pdf -->
+  <div class="cert-modal-overlay" id="certModalOverlay" role="dialog" aria-modal="true" aria-labelledby="certModalHeading">
+    <div class="cert-modal-box">
+      <div class="cert-modal-header">
+        <div class="cert-modal-header-info">
+          <div class="cert-modal-badge">ISTQB® Certified</div>
+          <h3 class="cert-modal-heading" id="certModalHeading">Foundation Level Certificate in Software Testing</h3>
+          <p class="cert-modal-meta">Karan M &nbsp;·&nbsp; No. ITB-CTFL-121969 &nbsp;·&nbsp; 26 March 2023</p>
+        </div>
+        <button class="cert-modal-close" id="certModalClose" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="cert-modal-body">
+        <iframe src="assets/certificates/ISTQB_Certificate.pdf" class="cert-iframe" title="ISTQB Certificate of Profession — Karan M"></iframe>
+      </div>
+      <div class="cert-modal-footer">
+        <a href="assets/certificates/ISTQB_Certificate.pdf" download="Karan_Muthusamy_ISTQB_CTFL" class="btn btn-primary cert-dl-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download Certificate
         </a>
       </div>
     </div>

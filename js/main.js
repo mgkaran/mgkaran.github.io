@@ -144,6 +144,34 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ============================================================
+   CERTIFICATE MODAL
+   ============================================================ */
+const showCredentialBtn  = document.getElementById('showCredentialBtn');
+const certModalOverlay   = document.getElementById('certModalOverlay');
+const certModalCloseBtn  = document.getElementById('certModalClose');
+
+function openCertModal() {
+  certModalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal() {
+  certModalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+showCredentialBtn.addEventListener('click', openCertModal);
+certModalCloseBtn.addEventListener('click', closeCertModal);
+
+certModalOverlay.addEventListener('click', (e) => {
+  if (e.target === certModalOverlay) closeCertModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && certModalOverlay.classList.contains('open')) closeCertModal();
+});
+
+/* ============================================================
    LANGUAGE TOGGLE  (DE primary, EN secondary)
    ============================================================ */
 const langToggleBtn = document.getElementById('langToggle');
