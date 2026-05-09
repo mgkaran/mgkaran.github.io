@@ -1077,7 +1077,7 @@ ul {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 420px 1fr;
   align-items: center;
   gap: 64px;
 }
@@ -1095,10 +1095,10 @@ ul {
 }
 
 .about-img {
-  width: 320px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   display: block;
-  max-width: 100%;
 }
 
 /* ── Content column ── */
@@ -1136,7 +1136,7 @@ ul {
 .logos-track {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   width: max-content;
   padding: 4px 0;
   animation: logoScroll 22s linear infinite;
@@ -2596,6 +2596,11 @@ body.dark-theme .soon-badge {
     margin: 0 auto;
   }
 
+  .hero-ai-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-photo-wrap::before {
     display: none;
   }
@@ -2614,7 +2619,7 @@ body.dark-theme .soon-badge {
   }
 
   .about-img {
-    width: 260px;
+    max-width: 300px;
   }
 
   .skills-grid {
@@ -2671,10 +2676,30 @@ body.dark-theme .soon-badge {
    RESPONSIVE — MOBILE
    ============================================================ */
 @media (max-width: 600px) {
-  .nav-social,
-  .nav-divider {
-    display: none;
+  /* Two-row navbar: logo + menu btn on row 1, all icons on row 2 */
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+    row-gap: 8px;
   }
+
+  .nav-logo {
+    flex: 1;
+  }
+
+  .nav-actions {
+    display: contents; /* children become direct flex items of nav-container */
+  }
+
+  .nav-logo      { order: 1; }
+  .nav-menu-wrap { order: 2; }
+
+  /* Row 2 — preferences + social: centered below logo */
+  .lang-toggle   { order: 10; }
+  .theme-toggle  { order: 11; }
+  .nav-divider   { order: 12; display: flex; }
+  .nav-social    { order: 13; display: flex; }
 
   .section {
     padding: 56px 0;
@@ -2702,7 +2727,7 @@ body.dark-theme .soon-badge {
   }
 
   .about-img {
-    width: 200px;
+    max-width: 260px;
   }
 
   .form-row {
