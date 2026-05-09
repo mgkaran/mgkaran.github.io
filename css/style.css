@@ -1027,10 +1027,90 @@ ul {
 }
 
 /* ============================================================
-   ABOUT SECTION (placeholder)
+   ABOUT SECTION
    ============================================================ */
 .about {
   background: var(--bg-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Image */
+.about-img-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Gradient glow border that follows the image's own alpha shape */
+  filter:
+    drop-shadow(0 0 2px rgba(0, 170, 255, 1))
+    drop-shadow(0 0 10px rgba(0, 170, 255, 0.55))
+    drop-shadow(0 20px 48px rgba(0, 170, 255, 0.18));
+}
+
+.about-img {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+}
+
+/* Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 32px;
+}
+
+/* Logo marquee */
+.about-tools-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.logos-container {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+@keyframes logoScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  animation: logoScroll 22s linear infinite;
+}
+
+.logos-container:hover .logos-track {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  height: 54px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
 }
 
 /* ============================================================
@@ -1162,6 +1242,25 @@ ul {
   .hero-photo {
     width: clamp(200px, 48vw, 280px);
   }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .about-img-wrap {
+    justify-content: center;
+  }
+
+  .about-img {
+    max-width: 280px;
+  }
+
+  .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ============================================================
@@ -1196,5 +1295,13 @@ ul {
 
   .cv-modal {
     padding: 36px 22px 32px;
+  }
+
+  .about-img {
+    max-width: 220px;
+  }
+
+  .logo-item {
+    height: 44px;
   }
 }
