@@ -236,7 +236,7 @@ const tourSteps = [
     desc     : 'The site opens in German by default. Use this toggle to switch to English anytime — your preference is saved automatically.',
   },
   {
-    targetId : 'linkedinBtn',
+    targetId : () => window.innerWidth <= 600 ? 'linkedinBtnMobile' : 'linkedinBtn',
     icon     : '💼',
     title    : 'Connect on LinkedIn',
     desc     : 'Let\'s connect on LinkedIn! Feel free to reach out — I\'m always open to new professional connections.',
@@ -277,7 +277,8 @@ function positionTour(targetEl) {
 
 function showTourStep(step) {
   const s      = tourSteps[step];
-  const target = document.getElementById(s.targetId);
+  const id     = typeof s.targetId === 'function' ? s.targetId() : s.targetId;
+  const target = document.getElementById(id);
   if (!target) { endTour(); return; }
 
   tourIconWrapEl.textContent = s.icon;

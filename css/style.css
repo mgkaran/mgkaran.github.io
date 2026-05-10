@@ -594,6 +594,31 @@ ul {
   margin-top: 10px;
 }
 
+/* Social icons shown only on mobile (hidden on desktop — in navbar there) */
+.hero-social-mobile {
+  display: none;
+}
+
+.hero-social-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.hero-social-btn:hover {
+  background: var(--blue-1);
+  color: #fff;
+  border-color: var(--blue-1);
+  transform: translateY(-2px);
+}
+
 /* Entrance animations — CSS-driven so they fire instantly on load */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(28px); }
@@ -2692,6 +2717,15 @@ body.dark-theme .soon-badge {
   .nav-actions {
     display: flex;
     gap: 6px;
+  }
+
+  /* Social icons row — centered below CTA buttons */
+  .hero-social-mobile {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   /* Scroll indicator — explicit re-centering */
