@@ -2719,14 +2719,15 @@ body.dark-theme .soon-badge {
     gap: 6px;
   }
 
-  /* Stop flex-centering from pushing content above viewport / behind navbar */
+  /* Push the hero section itself down by navbar height so content is never hidden */
   .hero {
     align-items: flex-start;
+    padding-top: 74px; /* = navbar 68px + 6px gap */
   }
 
   .hero-container {
-    padding-top: 86px;  /* navbar (68px) + 18px breathing room */
-    padding-bottom: 64px;
+    padding-top: 20px;
+    padding-bottom: 52px;
   }
 
   /* Social icons row — centered below CTA buttons */
