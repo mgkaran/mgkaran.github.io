@@ -98,6 +98,20 @@ const translations = {
     'proj.soon.title'  : 'Playwright Automatisierungsprojekt',
     'proj.soon.desc'   : 'Nächstes Projekt – Aufbau eines umfassenden E2E-Frameworks mit Playwright & TypeScript. Dokumentation und GitHub-Repository folgen in Kürze.',
 
+    /* Project 3 — Playwright AI-Assisted */
+    'proj.3.type'  : 'E2E · KI-gestützte Tests',
+    'proj.3.title' : 'KI-gestützte Automatisierung mit Playwright',
+    'proj.3.f1'    : 'E2E-Automatisierung mit Playwright & TypeScript',
+    'proj.3.f2'    : 'KI-gestützte Testfall-Generierung',
+    'proj.3.f3'    : 'Funktionale & Barrierefreiheitstests',
+    'proj.3.f4'    : 'UI- & API-Tests',
+    'proj.3.f5'    : 'CI/CD-Pipeline via GitHub Actions',
+
+    /* Project 4 — nammarental.com */
+    'proj.4.badge' : 'Kommt bald',
+    'proj.4.title' : 'nammarental.com — Startup QA',
+    'proj.4.desc'  : 'Reales Startup-Projekt – Aufbau einer Automatisierungsstrategie und Test-Suite für eine Live-Vermietungsplattform.',
+
     /* ── Contact ── */
     'contact.label'            : 'Kontakt aufnehmen',
     'contact.title'            : 'Lass uns <span>verbinden</span>',
@@ -229,6 +243,20 @@ const translations = {
     'proj.soon.badge'  : 'In Progress',
     'proj.soon.title'  : 'Playwright Automation Project',
     'proj.soon.desc'   : 'Next project — building a comprehensive E2E framework with Playwright & TypeScript. Documentation and GitHub repository coming soon.',
+
+    /* Project 3 — Playwright AI-Assisted */
+    'proj.3.type'  : 'E2E · AI-Assisted Testing',
+    'proj.3.title' : 'AI-Assisted Automation with Playwright',
+    'proj.3.f1'    : 'E2E Automation with Playwright & TypeScript',
+    'proj.3.f2'    : 'AI-Assisted Test Case Generation',
+    'proj.3.f3'    : 'Functional & Accessibility Testing',
+    'proj.3.f4'    : 'UI & API Testing',
+    'proj.3.f5'    : 'CI/CD Integration via GitHub Actions',
+
+    /* Project 4 — nammarental.com */
+    'proj.4.badge' : 'Upcoming',
+    'proj.4.title' : 'nammarental.com — Startup QA',
+    'proj.4.desc'  : 'Upcoming real-world engagement — building automation strategy and test suite for a live startup rental platform.',
 
     /* ── Contact ── */
     'contact.label'            : 'Get In Touch',

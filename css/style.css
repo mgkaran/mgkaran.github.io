@@ -2045,7 +2045,7 @@ body.dark-theme .badge-level {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   align-items: start;
 }
@@ -2209,6 +2209,18 @@ body.dark-theme .badge-level {
 body.dark-theme .soon-badge {
   color: #ffb733;
   background: rgba(255, 160, 0, 0.12);
+}
+
+/* Upcoming real project — green accent */
+.soon-badge-upcoming {
+  background: rgba(0, 200, 120, 0.1);
+  border-color: rgba(0, 200, 120, 0.3);
+  color: #00a86b;
+}
+
+body.dark-theme .soon-badge-upcoming {
+  color: #00d48a;
+  background: rgba(0, 200, 120, 0.12);
 }
 
 .soon-icon {
