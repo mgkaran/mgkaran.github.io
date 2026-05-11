@@ -31,7 +31,7 @@ const translations = {
     'stats.years'      : 'Jahre Erfahrung',
     'stats.scripts'    : 'Automatisierungsskripte',
     'stats.saved'      : 'Jährliche Kosteneinsparung',
-    'stats.frameworks' : 'Frameworks beherrscht',
+    'stats.frameworks' : 'Echte QA-Projekte',
 
     /* ── Experience ── */
     'exp.label' : 'Karriere',
@@ -178,7 +178,7 @@ const translations = {
     'stats.years'      : 'Years Experience',
     'stats.scripts'    : 'Automation Scripts',
     'stats.saved'      : 'Annual Cost Saved',
-    'stats.frameworks' : 'Frameworks Mastered',
+    'stats.frameworks' : 'Real QA Projects',
 
     /* ── Experience ── */
     'exp.label' : 'Career',
