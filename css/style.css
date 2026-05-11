@@ -2751,10 +2751,11 @@ body.dark-theme .soon-badge-upcoming {
     width: 100%;
   }
 
-  /* Scroll indicator — explicit re-centering */
+  /* Scroll indicator — stretch full width, let flex align-items:center do the centering */
   .hero-scroll {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    transform: none;
     bottom: 20px;
   }
 
